@@ -6,14 +6,14 @@
 			"command": "host start",
 			"problemMatcher": "$func-node-watch",
 			"isBackground": true,
-			"dependsOn": "npm install (functions)",
+			"dependsOn": "npm install",
 			"options": {
 				"cwd": "${workspaceFolder}/employee-serverless-api"
 			}
 		},
 		{
 			"type": "shell",
-			"label": "npm install (functions)",
+			"label": "npm install",
 			"command": "npm install",
 			"options": {
 				"cwd": "${workspaceFolder}/employee-serverless-api"
@@ -21,7 +21,7 @@
 		},
 		{
 			"type": "shell",
-			"label": "npm prune (functions)",
+			"label": "npm prune",
 			"command": "npm prune --production",
 			"problemMatcher": [],
 			"options": {
