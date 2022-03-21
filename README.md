@@ -22,44 +22,6 @@ A demo related with the talk *Power Up Your BackEnd Applications with Serverless
 
 ## How to run the application locally?
 
-<details><summary><b>Project: employee-api</b></summary> 
-
-To execute locally this project you will need to follow the steps bellow:
-
-1. First you need to go to the folder: `employee-api` and run the command:
-
-```bash
-> npm install
-```
-
-3. Include the Azure SQL Server connection string creating an `.env` file:
-
-```bash
-# Database connection string
-DATABASE_URL="sqlserver://DB_SERVER_NAME.database.windows.net:1433;database=DB_NAME;user=DB_USER@DB_SERVER_NAME;password={PASSWORD};encrypt=true"
-
-# Shadow database connection string for development
-SHADOW_DATABASE_URL="sqlserver://DB_SERVER_NAME.database.windows.net:1433;database=DB_NAME;user=DB_USER@DB_SERVER_NAME;password={PASSWORD};encrypt=true"
-```
-
-4. After to install all the Node.Js packages, now you can execute the command:
-
-```bash
-> nodemon
-```
-
-5. Now you will see the message saying the application is running in the port: `localhost:3001/api/v1` and start to test locally the application (using Postman):
-
-| Objective  |  HTTP Verb |  Route  | 
-|---|---|---|
-| Create a new Employee  | POST  | localhost:3001/api/v1/employees  | 
-| List All Employees  | GET  | localhost:3001/api/v1/employees |   
-| List Employee By Id | GET  | localhost:3001/api/v1/employees/:id |   
-| Update Employee By Id  | PUT  | localhost:3001/api/v1/employees/:id |  
-| Delete Employee By Id  | DELETE  | localhost:3001/api/v1/employees/:id |  
-
-</details>
-
 <details><summary><b>Project: client</b></summary>
 
 To execute locally this project you will need to follow the steps bellow:
