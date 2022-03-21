@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Back-End application using Azure Functions + Azure SQL + Prisma",
   "scripts": {
+    "build": "tsc",
     "dev": "func start",
     "db:push": "prisma db push",
     "prestart": "npm run build && func extensions install",
