@@ -2,12 +2,7 @@
   "azureFunctions.deploySubpath": "employee-serverless-api",
   "azureFunctions.postDeployTask": "npm install",
   "azureFunctions.projectLanguage": "JavaScript",
-  "azureFunctions.projectRuntime": "~4",
+  "azureFunctions.projectRuntime": "~3",
   "debug.internalConsoleOptions": "neverOpen",
   "azureFunctions.preDeployTask": "npm prune",
-  "liveServer.settings.proxy": {
-    "enable": true,
-    "baseUri": "/api/",
-    "proxyUri": "http://localhost:7071/api/employees/"
-  }
 }
