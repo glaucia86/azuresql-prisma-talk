@@ -5,8 +5,11 @@
  * author: Glaucia Lemos <Twitter: @glaucia_lemos86>
  */
 
-const prisma = require('../shared/prisma');
+// const prisma = require('../shared/prisma');
 const handleError = require('../shared/error');
+const { PrismaClient } = require('@prisma/client');
+
+const prisma = new PrismaClient();
 
 module.exports = async function (context, req) {
   try {

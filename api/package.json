@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "Back-End application using Azure Functions + Azure SQL + Prisma",
   "scripts": {
-    "dev": "func start",
-    "db:push": "prisma db push",
-    "prestart": "func extensions install",
-    "start": "npm run start:host & npm run watch",
-    "build:production": "npm run prestart && npm prune --production"
+    "dev": "func start"
   },
   "keywords": [
     "api",
