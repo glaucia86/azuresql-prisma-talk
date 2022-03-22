@@ -65,9 +65,9 @@ export default () => axios.create({
 
 </details>
 
-<details><summary><b>Project: employee-serverless-api</b></summary>
+<details><summary><b>Project: api</b></summary>
 
-1. First you need to go to the folder: `employee-serverless-api` and run the command:
+1. First you need to go to the folder: `api` and run the command:
 
 ```bash
 > npm install

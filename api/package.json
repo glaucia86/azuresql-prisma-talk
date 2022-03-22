@@ -1,5 +1,5 @@
 {
-  "name": "employee-serverless-api",
+  "name": "api",
   "version": "1.0.0",
   "description": "Back-End application using Azure Functions + Azure SQL + Prisma",
   "scripts": {
