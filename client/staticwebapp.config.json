@@ -1,16 +1,6 @@
 {
-  "routes": [
-    {
-      "route": "/index.html",
-      "redirect": "/"
-    },
-    {
-      "route": "/list-employees",
-      "rewrite": "/index.html"
-    },
-    {
-      "route": "/edit-employee/*",
-      "rewrite": "/index.html"
-    }
-  ]
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/css/*", "/js/*", "/api/*", "/favicon.ico"]
+  }
 }
