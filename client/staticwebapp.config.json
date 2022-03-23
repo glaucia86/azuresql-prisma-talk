@@ -1,11 +1,15 @@
 {
   "routes": [
     {
+      "route": "/index.html",
+      "redirect": "/"
+    },
+    {
       "route": "/list-employees",
       "rewrite": "/index.html"
     },
     {
-      "route": "/list-employees/*",
+      "route": "/edit-employee/*",
       "rewrite": "/index.html"
     }
   ]
