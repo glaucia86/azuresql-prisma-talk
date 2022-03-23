@@ -3,6 +3,10 @@
     {
       "route": "/list-employees",
       "rewrite": "/index.html"
+    },
+    {
+      "route": "/list-employees/*",
+      "rewrite": "/index.html"
     }
   ]
 }
