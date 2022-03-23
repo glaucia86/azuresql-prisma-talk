@@ -33,7 +33,7 @@ jobs:
           ###### End of Repository/Build Configurations ######
         env: # Add environment variables here
           NODE_VERSION: 14       
-          PRE_BUILD_COMMAND: "npx prisma generate"   
+          # PRE_BUILD_COMMAND: "npx prisma generate"   
           # CUSTOM_BUILD_COMMAND: "npm install @prisma/client@3.11.0"              
           # POST_BUILD_COMMAND: "npm install @prisma/client@3.11.0"  
 
