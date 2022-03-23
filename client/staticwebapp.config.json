@@ -1,0 +1,8 @@
+{
+  "routes": [
+    {
+      "route": "/list-employees",
+      "rewrite": "/index.html"
+    }
+  ]
+}
