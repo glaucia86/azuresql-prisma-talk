@@ -15,7 +15,7 @@ module.exports = async function (context, req) {
 
     const employee = await prisma.employee.update({
       where: {
-        employee_id: String(id),
+        employee_id: parseInt(id),
       },
       data: {
         name: name || undefined,
