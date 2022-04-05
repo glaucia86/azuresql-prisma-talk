@@ -28,10 +28,10 @@
   },
   "homepage": "https://github.com/glaucia86/azuresql-prisma-talk#readme",
   "dependencies": {
-    "@prisma/client": "^3.11.0",
-    "prisma": "^3.11.0"
+    "@prisma/client": "^3.12.0"
   },
   "devDependencies": {
-    "@azure/functions": "^3.0.0"
+    "@azure/functions": "^3.0.0",
+    "prisma": "^3.12.0"
   }
 }
