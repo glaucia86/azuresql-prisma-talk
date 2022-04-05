@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "Back-End application using Azure Functions + Azure SQL + Prisma",
   "scripts": {
-    "dev": "func start",
-    "postinstall": "npx prisma generate"
-  },
-  "prisma": {
-    "schema": "prisma/schema.prisma"
+    "dev": "func start"
   },
   "keywords": [
     "api",
