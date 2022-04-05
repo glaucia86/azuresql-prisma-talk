@@ -4,9 +4,7 @@
   "description": "Back-End application using Azure Functions + Azure SQL + Prisma",
   "scripts": {
     "dev": "func start",
-    "generate": "npx prisma generate",
-    "postinstall": "prisma generate",
-    "build": "npm run generate"
+    "postinstall": "npx prisma generate"
   },
   "prisma": {
     "schema": "prisma/schema.prisma"
