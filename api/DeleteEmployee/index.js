@@ -13,7 +13,7 @@ module.exports = async function (context, req) {
     const { id } = req.params;
     const employee = await prisma.employee.delete({
       where: {
-        employee_id: parseInt(id),
+        employee_id: String(id),
       },
     });
 
