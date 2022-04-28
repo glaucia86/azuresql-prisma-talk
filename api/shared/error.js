@@ -5,8 +5,8 @@
  * author: Glaucia Lemos <Twitter: @glaucia_lemos86>
  */
 
-module.exports = async function (status, message, context) {
-  context.res = {
+module.exports = function (status, message) {
+  return {
     status: status,
     body: message,
   };

@@ -57,7 +57,14 @@ export default {
           });
         });
       } catch (error) {
-        console.log(error);
+        this.$swal({
+          title: error.message,
+          icon: 'error',
+          showConfirmButton: true,
+          allowOutsideClick: false,
+          allowEnterKey: true,
+          allowEscapeKey: false,
+        });
       }
     },
   },
