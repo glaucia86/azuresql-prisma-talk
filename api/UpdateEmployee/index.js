@@ -11,7 +11,17 @@ const handleError = require('../shared/error');
 module.exports = async function (context, req) {
   try {
     const { id } = req.params;
-    const { name, job_role, salary, employee_registration } = req.body;
+    const { name, job_role, salary } = req.body;
+
+    const employeeRegistrationExists = await prisma.employee.findUnique({
+      where: {
+        employee_id: String(id),
+      },
+    });
+
+    if (!employeeRegistrationExists) {
+      return handleError(404, 'Employee not found!');
+    }
 
     const employee = await prisma.employee.update({
       where: {
@@ -21,7 +31,6 @@ module.exports = async function (context, req) {
         name: name || undefined,
         job_role: job_role || undefined,
         salary: salary || undefined,
-        employee_registration: parseInt(employee_registration) || undefined,
       },
     });
 
@@ -31,6 +40,7 @@ module.exports = async function (context, req) {
     };
   } catch (error) {
     context.log('Error to update an Employee');
+    context.log(error);
     return handleError(500, error, context);
   }
 };
