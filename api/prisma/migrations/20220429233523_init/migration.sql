@@ -9,7 +9,9 @@ CREATE TABLE [dbo].[Employee] (
     [job_role] NVARCHAR(100) NOT NULL,
     [salary] DECIMAL(12,2) NOT NULL,
     [employee_registration] INT NOT NULL,
-    CONSTRAINT [Employee_pkey] PRIMARY KEY ([employee_id])
+    [createdAt] DATETIME2 NOT NULL CONSTRAINT [Employee_createdAt_df] DEFAULT CURRENT_TIMESTAMP,
+    [updateAt] DATETIME2 NOT NULL CONSTRAINT [Employee_updateAt_df] DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT [Employee_pkey] PRIMARY KEY CLUSTERED ([employee_id])
 );
 
 COMMIT TRAN;
