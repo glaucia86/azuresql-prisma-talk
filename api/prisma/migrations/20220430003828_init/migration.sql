@@ -11,7 +11,7 @@ CREATE TABLE [dbo].[Employee] (
     [employee_registration] INT NOT NULL,
     [createdAt] DATETIME2 NOT NULL CONSTRAINT [Employee_createdAt_df] DEFAULT CURRENT_TIMESTAMP,
     [updateAt] DATETIME2 NOT NULL CONSTRAINT [Employee_updateAt_df] DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT [Employee_pkey] PRIMARY KEY CLUSTERED ([employee_id])
+    CONSTRAINT [Employee_pkey] PRIMARY KEY ([employee_id])
 );
 
 COMMIT TRAN;
