@@ -39,29 +39,18 @@ To execute locally this project you will need to follow the steps bellow:
 
 3. Now, open your browser on `http://localhost:8080/` 
 
-4. Inside the project you will see a file: `src/Api.js`. This file contains all the Back-End request information (local or Azure Functions). If you want to test the Front-End, just choose which url you want to test in the Back-End:
+</details>
 
-```js
-/**
- * file: src/services/Api.js
- * data: 01/03/2022
- * description: file responsible for initializing 'axios' and HTTP base url requests
- * author: Glaucia Lemos <twitter: @glaucia_lemos86>
- */
+<details><summary><b>Project: db</b></summary>
 
-import axios from 'axios';
+The are different ways you can create an Azure SQL Database. Using the Portal, using AZ CLI or Powershell. The easiest is using the Portal, and you can have see complete walk-through in this recording: [Demo: Deploy Azure SQL Database | Azure SQL for beginners (Ep. 14)](https://www.youtube.com/watch?v=wiBC4OxFX60&list=PLlrxD0HtieHi5c9-i_Dnxw9vxBY-TqaeN&index=21). If you prefer reading instead of watching, here a complete quickstart guide available, with detailed steps for each option: [Quickstart: Create an Azure SQL Database single database](https://docs.microsoft.com/en-us/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal). If you want something more concise and direct, you can to follow the simple 6-steps guide available here: [Create and connect to an Azure SQL DB](https://dev.to/azure/create-and-connect-to-an-azure-sql-db-9k0). 
 
-export default () => axios.create({
-  // => Back-End (local) 'baseURL'-> will make communication btw Front-End with Back-End
-  // baseURL: 'http://localhost:3001/api/v1',
+Make sure you create *two* Azure SQL databases:
 
-  // ==> Back-End (azure functions)
-  baseURL: 'http://localhost:7071/api',
-});
-```
+- `azuresql-prisma-database`
+- `azuresql-prisma-database-shadow`
 
-- **Back-End (local):** http://localhost:3001/api/v1
-- **Back-End (Azure Functions):** http://localhost:7071/api
+And you also create two users, one for each database. If you are not sure how to do it, don't worry, the links mentioned above will help you in going throught the simple process.
 
 </details>
 
@@ -99,7 +88,13 @@ SHADOW_DATABASE_URL="sqlserver://DB_SERVER_NAME.database.windows.net:1433;databa
 }
 ```
 
-4. Now you can execute the command:
+4. Run the Prisma migration, so that your database will be in sync with the Prisma model
+
+```bash
+> npx prisma migrate dev
+```
+
+5. Now you can execute the command:
 
 ```bash
 > npm run dev
@@ -122,7 +117,7 @@ You will see the message saying the application is running in the port: `http://
 - ✅ **[Oficial Documentation - Azure SQL](https://bit.ly/azure-sql-documentation/)**
 - ✅ **[Free Course Microsoft Learn - Azure SQL](https://bit.ly/mslearn-azuresql-course)**
 - ✅ **[Free Course - Azure SQL for Beginners](https://bit.ly/free-course-azuresql)**
-- ✅ **[Oficial Documentation - Prisma](https://www.prisma.io/docs/)**
+- ✅ **[Official Documentation - Prisma](https://www.prisma.io/docs/)**
 - ✅ **[Prisma Blog](https://www.prisma.io/blog/)**
 - ✅ **[Build serverless, full stack applications in Azure - Free Course](https://docs.microsoft.com/learn/paths/build-serverless-full-stack-apps-azure/?WT.mc_id=javascript-52133-gllemos)**
 - ✅ **[Azure SQL Documentation](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview?WT.mc_id=javascript-52133-gllemos)**
