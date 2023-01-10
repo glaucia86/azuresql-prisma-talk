@@ -1,6 +1,6 @@
 /**
  * file: CreateEmployee/index.js
- * date: 03/20/2022
+ * date: 01/10/2023
  * description: file responsible for create a new 'Employee'
  * author: Glaucia Lemos <Twitter: @glaucia_lemos86>
  */
