@@ -34,6 +34,7 @@ jobs:
         env: # Add environment variables here
           NODE_VERSION: 16
           PRE_BUILD_COMMAND: 'npx prisma@3.11.0 generate'
+          CUSTOM_BUILD_COMMAND: 'chown -R "$(whoami)" $SOURCE_DIR && npm install --unsafe-perm && npm run build'
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
