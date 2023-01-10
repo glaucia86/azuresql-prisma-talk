@@ -1,10 +1,10 @@
 {
   "azureFunctions.deploySubpath": "api",
-  "azureFunctions.postDeployTask": "npm install",
+  "azureFunctions.postDeployTask": "npm install (functions)",
   "azureFunctions.projectLanguage": "JavaScript",
-  "azureFunctions.projectRuntime": "~2",
+  "azureFunctions.projectRuntime": "~4",
   "debug.internalConsoleOptions": "neverOpen",
-  "azureFunctions.preDeployTask": "npm prune",
+  "azureFunctions.preDeployTask": "npm prune (functions)",
   "liveServer.settings.proxy": {
     "enable": true,
     "baseUri": "/api/employees/",
