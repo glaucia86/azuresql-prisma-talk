@@ -5,7 +5,8 @@
  * author: Glaucia Lemos <Twitter: @glaucia_lemos86>
  */
 
-const { PrismaClient } = require('@prisma/client');
+// const { PrismaClient } = require('@prisma/client');
+const { PrismaClient } = require('../prisma/client');
 
 const prisma = new PrismaClient();
 
