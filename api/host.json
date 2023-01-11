@@ -1,6 +1,5 @@
 {
   "version": "2.0",
-  "watchDirectories": ["prisma"],
   "logging": {
     "applicationInsights": {
       "samplingSettings": {

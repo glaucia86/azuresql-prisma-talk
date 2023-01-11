@@ -1,5 +1,5 @@
 generator client {
-  provider      = "prisma-client-js"
+  provider = "prisma-client-js"
   binaryTargets = ["native", "debian-openssl-1.1.x"]
 }
 
@@ -16,5 +16,5 @@ model Employee {
   salary                Decimal  @db.Decimal(12, 2)
   employee_registration Int      @unique
   createdAt             DateTime @default(now())
-  updatedAt             DateTime @default(now()) @updatedAt
+  updateAt              DateTime @default(now()) @updatedAt
 }

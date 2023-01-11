@@ -1,7 +1,7 @@
 {
   "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
   "configurations": {
-    "azuresql-prisma-talk": {
+    "azure-sql-prisma-vue": {
       "appLocation": "client",
       "apiLocation": "api",
       "outputLocation": "dist",
